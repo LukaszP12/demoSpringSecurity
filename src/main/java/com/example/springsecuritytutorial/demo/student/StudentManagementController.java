@@ -20,12 +20,15 @@ public class StudentManagementController {
         return STUDENTS;
     }
 
-    public void registerNewStudent(Student student){
+    @PostMapping
+    public void registerNewStudent(@RequestBody Student student){
+        System.out.println("registerNewStudent");
         System.out.println(student);
     }
 
     @DeleteMapping(path = "{studentId}")
     public void deleteStudent(@PathVariable("studentId") Integer studentId){
+        System.out.println("deleteNewStudent");
         System.out.println(studentId);
     }
 
